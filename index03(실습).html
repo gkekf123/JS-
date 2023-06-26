@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>
+      자바스크립트 카운트(인라인 이벤트를 이용해서 innerHTML value 속성을
+      이용해서 카운트처리하세요)
+    </h2>
+    <h3>필요한 속성을 추가해도 됩니다</h3>
+    <input type="number" id="number" value="0" />
+    <button class="plus" onclick="increment()">+</button>
+    <button class="min" onclick="decrement()">-</button>
+    <script>
+      var number = document.getElementById("number");
+
+      function increment() {
+        if (number.value < 0) {
+          alert("0보다 작을 수 없다");
+          return;
+        }
+        number.value++;
+      }
+
+      function decrement() {
+        if (number.value > 0) {
+          number.value--;
+        }
+      }
+    </script>
+  </body>
+</html>
